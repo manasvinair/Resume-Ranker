@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>Upload Resume</title>
+</head>
+<body>
+    <h2>Upload Resumes</h2>
+    <form action="/" method="post" enctype="multipart/form-data">
+        <label>Job Description:</label><br>
+        <textarea name="job_description" rows="4" cols="50" required></textarea><br><br>
+        <label>Select Resumes (PDF/DOCX):</label><br>
+        <input type="file" name="resumes" multiple accept=".pdf,.docx" required><br><br>
+        <input type="submit" value="Upload & Rank">
+    </form>
+</body>
+</html>

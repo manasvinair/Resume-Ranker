@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+
+    <title>Ranked Resumes</title>
+</head>
+<body>
+    <h2>Ranked Resumes</h2>
+    <table border="1">
+        <tr>
+            <th>Rank</th>
+            <th>Filename</th>
+            <th>Relevance Score</th>
+        </tr>
+        {% for resume in resumes %}
+        <tr>
+            <td>{{ loop.index }}</td>
+            <td>{{ resume.Filename }}</td>
+            <td>{{ resume.Similarities|default(0)|round(2) }}%</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <br>
+    <a href="/">Upload More Resumes</a>
+</body>
+</html>
+
