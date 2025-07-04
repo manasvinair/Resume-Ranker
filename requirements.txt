@@ -4,3 +4,6 @@ scikit-learn
 nltk
 numpy
 Werkzeug
+python-docx
+PyPDF2
+pandas
