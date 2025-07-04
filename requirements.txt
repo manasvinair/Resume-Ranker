@@ -7,3 +7,4 @@ Werkzeug
 python-docx
 PyPDF2
 pandas
+pdfplumber
